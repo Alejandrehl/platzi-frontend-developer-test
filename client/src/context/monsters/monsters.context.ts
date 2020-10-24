@@ -1,6 +1,5 @@
 import { createContext } from "react";
-import { initialState } from "./initial-state";
 
-const monstersContext = createContext(initialState);
+const monstersContext = createContext<any>({});
 
 export default monstersContext;

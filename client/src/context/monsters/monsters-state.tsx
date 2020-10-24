@@ -3,7 +3,7 @@ import { initialState } from "./initial-state";
 import MonstersContext from "./monsters.context";
 import MonstersReducer from "./monsters.reducer";
 import axios from "axios";
-import { BASE_URL } from "../types";
+import { BASE_URL, GET_MONSTERS } from "../types";
 
 const MonstersState = ({ children }: any) => {
   const [state, dispatch] = useReducer(MonstersReducer, initialState) as [
@@ -12,8 +12,8 @@ const MonstersState = ({ children }: any) => {
   ];
 
   const getMonsters = async () => {
-    const monsters = await axios.get(BASE_URL);
-    console.log(monsters);
+    const res = await axios.get(BASE_URL);
+    dispatch({ type: GET_MONSTERS, payload: res.data });
   };
 
   return (
