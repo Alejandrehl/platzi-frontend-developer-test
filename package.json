@@ -1,0 +1,24 @@
+{
+  "name": "platzi-frontend-test",
+  "version": "1.0.0",
+  "description": "Platzi Frontend Developer Test",
+  "main": "index.ts",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "start": "node index.ts",
+    "server": "nodemon index.ts",
+    "client": "npm start --prefix client",
+    "clientInstall": "npm install --prefix client",
+    "dev": "concurrently \"npm run server\" \"npm run client\"",
+    "heroku-postbuild": "NPM_CONFIG_PRODUCTION=false npm install --prefix client && npm run build --prefix client"
+  },
+  "author": "Alejandro Exequiel Hernández Lara",
+  "license": "ISC",
+  "dependencies": {
+    "@types/express": "^4.17.8",
+    "@types/node": "^14.14.2",
+    "concurrently": "^5.3.0",
+    "express": "^4.17.1",
+    "nodemon": "^2.0.6"
+  }
+}
