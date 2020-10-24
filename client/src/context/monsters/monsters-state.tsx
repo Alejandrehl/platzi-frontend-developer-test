@@ -5,7 +5,7 @@ import MonstersReducer from "./monsters.reducer";
 import axios from "axios";
 import { BASE_URL } from "../types";
 
-const MonstersState = ({ children }) => {
+const MonstersState = ({ children }: any) => {
   const [state, dispatch] = useReducer(MonstersReducer, initialState) as [
     any,
     any
