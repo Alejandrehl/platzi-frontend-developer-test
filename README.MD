@@ -27,3 +27,10 @@ Realizar un buscador usando una API pública que cumpla con los siguientes crite
 - Unit Testing
 - Integration Testing
 - E2E Testing
+
+### Solución
+
+- React con TypeScript.
+- Context en vez de Redux. Se ocupar Redux pero creo que este desafío queda mejor resuelto con Context.
+- Express con TypeScript.
+- API Pública utilizada: [https://jsonplaceholder.typicode.com/users](https://jsonplaceholder.typicode.com/users)
